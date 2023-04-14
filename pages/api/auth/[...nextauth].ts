@@ -1,10 +1,10 @@
-import NextAuth from "next-auth";
+import NextAuth, { AuthOptions } from "next-auth";
 import { compare } from "bcrypt"
 import Credentials from "next-auth/providers/credentials";
 
 import prismadb from '@/lib/prismadb'
 
-export default NextAuth({
+export const authOptions: AuthOptions = {
   providers: [
     Credentials({
       id: 'credentials',
@@ -54,4 +54,6 @@ export default NextAuth({
     secret: process.env.NEXTAUTH_JWT_SECRET,
   },
   secret: process.env.NEXTAUTH_SECRET,
-});
+};
+
+export default NextAuth(authOptions);
