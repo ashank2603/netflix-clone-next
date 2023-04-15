@@ -1,38 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Netflix Clone
 
-## Getting Started
+How to run:
 
-First, run the development server:
-
+- Clone the repository.
+- Open the directory in a terminal and run <code>npm install</code>
+- Create a mongodb database and copy the connection string.
+- Create a dotenv file and put the following in it:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+DATABASE_URL="<YOUR_MONGODB_CONNECTION_STRING>"
+NEXTAUTH_JWT_SECRET = '<YOUR_JWT_SECRET>'
+NEXTAUTH_SECRET = '<YOUR_NEXT_AUTH_SECRET>'
 ```
+- In the terminal now run <code>npx prisma db push</code>
+- Now run <code>npm run dev</code> in the terminal.
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Screenshots
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Login Page
+![image](https://user-images.githubusercontent.com/61231703/232249264-26d3b23d-054a-4ea7-8640-4360ea53b517.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Register Page
+![image](https://user-images.githubusercontent.com/61231703/232249415-b3537095-6877-43aa-9ba3-12e63d42b06f.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Home Page
+![image](https://user-images.githubusercontent.com/61231703/232249352-d1fc1580-d5eb-4bf2-b438-2b883c555bc4.png)
 
-## Learn More
+Movie List Page
+![image](https://user-images.githubusercontent.com/61231703/232249383-b16e2ed4-62ee-4940-9ddd-3f6303b360c0.png)
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployed Link Credentials
+- Email: guest@example.com
+- Password: guest123
